@@ -20,7 +20,10 @@ a {
   margin: 0 auto;
   display: block; }
 
-header img {
+header {
+  background-image: url(images/mv.jpg);
+  background-size: cover;
+  background-position: center center;
   max-width: 100%;
   height: 500px; }
 
@@ -68,7 +71,7 @@ footer {
   body {
     font-size: 2rem; }
 
-  header img {
+  header {
     max-width: 100%;
     height: 250px; }
 
