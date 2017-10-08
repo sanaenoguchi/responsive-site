@@ -1,0 +1,98 @@
+@import "compass";
+
+// colors
+$baseColor: #ffffff;
+$subColor: #dddddd;
+$keyColor: #9A9A9A;
+$fontColor: #9A9A9A;
+
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+/* Base
+------------------------------------------------------------*/
+
+body{
+  max-width:100%;
+  height:auto;
+  text-align:center;
+  line-height:0;
+  font-size: 2vw;
+  font-family:$baseFontFamily;
+  margin:0;
+  padding:0;
+  background-color: $baseColor;
+}
+a {
+    text-decoration:none;
+    color:#fff;
+}
+.block-center{
+  margin:0 auto;
+  display: block;
+}
+header img{
+      max-width:100%;
+      height:500px;
+}
+p{
+  color:$fontColor;
+  margin:50px auto;
+  display: block;
+}
+.container {
+      @include display-flex;
+      @include flex-direction(row);     // スキルボックスを横に並べる
+      justify-content: space-between;
+      margin:50px 0;
+}
+.box {
+     @include flex(1);
+}
+.title{
+    background:$subColor;
+    padding:50px;
+    color:$fontColor;
+}
+.text{
+    background:$keyColor;
+    color:#fff;
+    padding:100px 50px;
+}
+footer{background:$subColor;
+      padding:50px;
+}
+.button {
+    background:$keyColor;
+    display: inline-block;
+    @include border-radius(.4em);
+    padding: 20px 90px;
+    color:#fff;
+}
+
+@media (max-width: 768px) {
+  body{
+    font-size: 2rem;
+  }
+  header img{
+    max-width:100%;
+    height:250px;
+  }
+  .container{
+    @include display-flex;
+    @include flex-direction(column); 
+    margin:0 20px;
+  }
+  .box{
+    width:90%;
+    margin:30px auto;
+  }
+  .button{
+   width:90%;
+   padding:20px 0;
+   border-radius: unset;
+  }
+}
+  
+
+      
